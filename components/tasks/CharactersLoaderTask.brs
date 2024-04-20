@@ -19,8 +19,7 @@ sub getCharacterList()
             content = createObject("roSGNode", "ContentNode")
             for i = 0 to resultCount
                 item = results[i]
-                if isValid(item.characters)
-                else
+                if NOT isValid(item.characters)
                     itemcontent = content.createChild("CharacterItemComponentData")
                     itemcontent.url = item.thumbnail.path + ".jpg"
                     itemcontent.name = item.name

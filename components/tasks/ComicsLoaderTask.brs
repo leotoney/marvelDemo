@@ -17,6 +17,7 @@ sub getComicList()
             for i = 0 to resultCount
                 item = results[i]
                 if isValid(item.characters)
+                    ' Extract the comics which has characters associated with it.
                     if item.characters.available <> 0
                         itemcontent = content.createChild("ContentNode")
                         itemcontent.HDGRIDPOSTERURL = item.thumbnail.path + ".jpg"

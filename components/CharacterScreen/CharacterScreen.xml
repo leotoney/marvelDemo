@@ -3,7 +3,6 @@
     <script type="text/brightscript" uri="CharacterScreen.brs" />
     <script type="text/brightscript" uri="../Utils/utils.brs" />
     <interface>
-        <!-- Content fields -->
         <field id="content" type="node" onchange="onContentChange"/>
         <field id="itemSelected" type="integer" alwaysnotify="true" alias="myMarkupList.itemSelected" />
         <field id="jumpToItem" type="integer" onChange="OnJumpToItem" value="0" alwaysNotify="true" />
@@ -11,8 +10,8 @@
     <children>
         <MarkupList id="myMarkupList"
             itemComponentName = "ListItemComponent" 
-            itemSize = "[ 1000, 200 ]" 
-            itemSpacing = "[ 0, 20 ]" 
+            itemSize = "[1000, 200]" 
+            itemSpacing = "[0, 20]" 
             drawFocusFeedback = "true" 
             focusBitmapUri = "pkg:/images/focus.9.png"
             vertFocusAnimationStyle = "fixedFocusWrap" />

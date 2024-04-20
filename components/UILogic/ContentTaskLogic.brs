@@ -1,3 +1,4 @@
+' Run the comic API task
 sub RunComicContentTask()
     m.contentTask = CreateObject("roSGNode", "ComicsLoaderTask")
     ' observe content so we can know when feed content will be parsed
@@ -7,7 +8,8 @@ sub RunComicContentTask()
     m.loadingIndicator.visible = true
 end sub
 
-sub OnComicContentLoaded() ' invoked when content is ready to be used
+' Invoked when comics content is ready to be used
+sub OnComicContentLoaded() 
     if isValid(m.contentTask.content)
         m.comicsGridScreen.SetFocus(true)
         m.loadingIndicator.visible = false
@@ -16,6 +18,7 @@ sub OnComicContentLoaded() ' invoked when content is ready to be used
     end if
 end sub
 
+' Run the comic Character API task
 sub RunComicCharacterTask( id as string )
     m.characterTask = CreateObject("roSGNode", "CharactersLoaderTask") 
     m.characterTask.ObserveField("content", "OnComicCharactersLoaded")
@@ -26,6 +29,7 @@ sub RunComicCharacterTask( id as string )
     m.loadingIndicator.visible = true
 end sub
 
+' Invoked when comics character content is ready to be used
 sub OnComicCharactersLoaded()
     if isValid(m.characterTask.content)
         m.CharacterScreen.SetFocus(true)

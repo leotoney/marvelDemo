@@ -1,6 +1,8 @@
 sub ShowVideoScreen(index as integer, content as object)
-    m.videoPlayer = CreateObject("roSGNode", "Video") ' create new instance of video node for each playback
-    ShowScreen(m.videoPlayer) ' show video screen
+    ' Create new instance of video node for each playback
+    m.videoPlayer = CreateObject("roSGNode", "Video") 
+    ' Show video screen
+    ShowScreen(m.videoPlayer) 
     videocontent = createObject("RoSGNode", "ContentNode")
     m.rowIndex = index
     if isValid(content) and isValid(content.name)
@@ -9,12 +11,14 @@ sub ShowVideoScreen(index as integer, content as object)
     videocontent.streamformat = "mp4"
     videocontent.url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     m.videoPlayer.content = videocontent
-    m.videoPlayer.control = "play" ' start playback
+    ' Start playback
+    m.videoPlayer.control = "play" 
     m.videoPlayer.ObserveField("state", "OnVideoPlayerStateChange")
     m.videoPlayer.ObserveField("visible", "OnVideoVisibleChange")
 end sub
 
-sub OnVideoPlayerStateChange() ' invoked when video state is changed
+' Invoked when video state is changed
+sub OnVideoPlayerStateChange() 
     state = m.videoPlayer.state
     ' close video screen in case of error or end of playback
     if state = "error" or state = "finished"
@@ -22,7 +26,8 @@ sub OnVideoPlayerStateChange() ' invoked when video state is changed
     end if
 end sub
 
-sub OnVideoVisibleChange() ' invoked when video node visibility is changed
+' Invoked when video node visibility is changed
+sub OnVideoVisibleChange() 
     if m.videoPlayer.visible = false and m.top.visible
         m.videoPlayer.control = "stop"
         m.videoPlayer.content = invalid

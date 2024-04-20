@@ -11,7 +11,7 @@
             <Poster id="poster" loadDisplayMode="scaleToFit" width="400" height="200" loadWidth="400" loadHeight="200"/>
 			<LayoutGroup id="titleGroup" layoutDirection="vert" itemSpacings="[20]">
                 <Label id="title" translation="[20, 43]" width="500" horizAlign="center" vertAlign="bottom" wrap="true" lineSpacing="0" font = "font:MediumBoldSystemFont" />
-				<Label id="description" translation="[0, 0]" width="600" horizAlign="left" vertAlign="bottom" maxLines="4" wrap="true" lineSpacing="0" />
+				<Label id="description" translation="[0, 0]" width="600" horizAlign="left" vertAlign="bottom" maxLines="5" wrap="true" lineSpacing="0" />
             </LayoutGroup>
         </LayoutGroup>
         
