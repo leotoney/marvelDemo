@@ -3,6 +3,8 @@ sub Init()
     m.top.backgroundColor = "0x662D91"
     m.top.backgroundUri= "pkg:/images/background_marvel.jpg"
     m.loadingIndicator = m.top.FindNode("loadingIndicator")
+    spinner = m.top.FindNode("spinner")
+	m.loadingIndicator.poster.uri="pkg:/images/loader.png"
     InitScreenStack()
     ShowGridScreen()
 end sub

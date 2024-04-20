@@ -9,16 +9,11 @@
     <script type="text/brightscript" uri="UILogic/VideoPlayerLogic.brs" />
     <script type="text/brightscript" uri="UILogic/CharacterScreenLogic.brs" />
     <children>
-        <Label
+        <BusySpinner
             id="loadingIndicator"
-            text="Loading..."
-            width="1280"
-            height="720"
-            translation="[0, 0]"
-            horizAlign="center"
-            vertAlign="center"
-            visible="false"
-            font="font:MediumBoldSystemFont"
-        />
+            translation="[570, 300]"
+            control="start"
+            clockwise="true"
+            spinInterval="2" />
     </children>
 </component>
