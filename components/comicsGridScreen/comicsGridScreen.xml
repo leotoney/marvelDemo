@@ -8,23 +8,7 @@
         <field id="itemSelected" type="integer" alwaysnotify="true" alias="posterGrid.itemSelected" />
     </interface>
     <children>
-        <Label
-            id = "title"
-            width = "450"
-            height = "95"
-            visible = "false"
-            color = "0xFFFFFFFF"
-            horizAlign="center"
-            text = "MARVEL COMICS"
-            font = "font:MediumBoldSystemFont" >
-        </Label>
-        <PosterGrid 
-            id = "posterGrid" 
-            basePosterSize = "[ 300, 200 ]" 
-            caption1NumLines = "1" 
-            numColumns = "3" 
-            itemSpacing = "[ 20, 20 ]" 
-            posterDisplayMode = "scaleToFill"
-        />
+        <Label id = "title" width = "450" height = "95" visible = "false" color = "0xFFFFFFFF" horizAlign="center" text = "MARVEL COMICS" font = "font:MediumBoldSystemFont" />
+        <PosterGrid id = "posterGrid" basePosterSize = "[ 300, 200 ]" caption1NumLines = "1" numColumns = "3" itemSpacing = "[ 20, 20 ]" posterDisplayMode = "scaleToFill"/>
     </children>
 </component>
