@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ListItemComponent" extends="Group">
+    <interface>
+      <field id="itemContent" type="node" onChange="OnContentSet" />
+    </interface>
+    <script type="text/brightscript" uri="ListItemComponent.brs" />
+    <script type="text/brightscript" uri="../Utils/utils.brs" />
+
+    <children>
+        <LayoutGroup id="characterGroup" layoutDirection="horiz" itemSpacings="[10]">
+            <Poster
+                id="poster"
+                loadDisplayMode="scaleToFit"
+                width="400"
+                height="200"
+                loadWidth="400"
+                loadHeight="200"
+            />
+			<LayoutGroup id="titleGroup" layoutDirection="vert" itemSpacings="[20]">
+                <Label id="title" translation="[20, 43]" width="500" horizAlign="center" vertAlign="bottom" wrap="true" lineSpacing="0" font = "font:MediumBoldSystemFont" />
+				<Label id="description" translation="[0, 0]" width="600" horizAlign="left" vertAlign="bottom" maxLines="4" wrap="true" lineSpacing="0" />
+            </LayoutGroup>
+        </LayoutGroup>
+        
+    </children>
+</component>

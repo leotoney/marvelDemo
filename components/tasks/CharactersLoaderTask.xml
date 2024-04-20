@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="CharactersLoaderTask" extends="Task">
+    <interface>
+        <field id="content" type="node" />
+        <field id="requestParams" type="assocarray" />
+    </interface>
+
+    <script type="text/brightscript" uri="CharactersLoaderTask.brs" />
+    <script type="text/brightscript" uri="../Utils/utils.brs"/>
+</component>
